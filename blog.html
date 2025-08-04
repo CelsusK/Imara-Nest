@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imara Nest - Blog</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">Imara Nest</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="blog-section">
+    <div class="container">
+      <h2 class="section-title">Health & Wellness Blog</h2>
+      <p class="section-subtitle">Insights from our medical professionals</p>
+
+      <div class="blog-card">
+        <img src="images/blog1.jpg" alt="Mental Wellness" />
+        <h3 class="blog-title">Understanding Mental Health</h3>
+        <p class="blog-meta">By Dr. Achieng • July 31, 2025</p>
+        <p class="blog-content">
+          Mental health is just as important as physical health. In this blog, I’ll explain the signs of mental stress, how to cope, and when to seek help. Let's break the stigma around therapy and mental support...
+        </p>
+      </div>
+
+      <div class="blog-card">
+        <img src="images/blog2.jpg" alt="Therapy Session" />
+        <h3 class="blog-title">How Therapy Can Improve Your Life</h3>
+        <p class="blog-meta">By Dr. Kamau • July 30, 2025</p>
+        <p class="blog-content">
+          Many patients wait too long to seek therapy. Therapy isn't just for crises—it can support daily growth and healing. Discover how consistent therapy helps patients manage emotions and life challenges...
+        </p>
+      </div>
+
+      <div class="add-blog-form">
+        <h3>Add a New Blog Post</h3>
+        <form>
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" placeholder="Enter blog title" />
+          </div>
+          <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author" placeholder="Doctor's name" />
+          </div>
+          <div class="form-group">
+            <label for="image">Upload Image</label>
+            <input type="file" id="image" name="image" />
+          </div>
+          <div class="form-group">
+            <label for="content">Blog Content</label>
+            <textarea id="content" name="content" rows="6" placeholder="Write your blog here..."></textarea>
+          </div>
+          <button type="submit" class="primary-btn">Post Blog</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Imara Nest. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

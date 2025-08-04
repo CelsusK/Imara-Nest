@@ -1,0 +1,524 @@
+/* style.css */
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Header */
+.site-header {
+  background-color:#0c3c01; /* Changed to green */
+  color: white;
+  padding: 1rem 0;
+  margin: auto;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  background-color: transparent;
+  color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #5072A7;
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.nav-links a {
+  color: #DC143C;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  /* Remove old box-shadow and add oval effect */
+  box-shadow: 0 2px 16px 0 rgba(0,0,128,0.18); /* Softer, more oval shadow */
+  border-radius: 32px; /* Sharper, pill-shaped curve */
+  padding: 0.5em 2.2em; /* More space between text and curve */
+  background: #ffd700; /* Optional: makes the oval more visible */
+  display: inline-block;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+.booking-section {
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, #e8f0f7, #ffffff);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.booking-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.booking-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  border-color: #2b6777;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.booking-form button {
+  background-color: #2b6777;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+.btn, .primary-btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Create the glowing pseudo-element */
+.btn::before, .primary-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 70%);
+    opacity: 0;
+    z-index: -1;
+    transform: rotate(0deg);
+    transition: all 0.5s ease-in-out;
+}
+
+/* Define the glow color for the primary button */
+.primary-btn {
+    --glow-color: #008cff;
+}
+
+.primary-btn::before {
+    background: radial-gradient(circle, var(--glow-color), transparent 70%);
+    filter: blur(20px); /* Apply a blur to create the glow effect */
+}
+
+/* Define the glow color for the secondary button */
+.btn {
+    --glow-color: #ffd700;
+}
+
+.btn::before {
+    background: radial-gradient(circle, var(--glow-color), transparent 70%);
+    filter: blur(20px); /* Apply a blur to create the glow effect */
+}
+
+/* Animate the glow on hover */
+.btn:hover::before, .primary-btn:hover::before {
+    transform: rotate(180deg);
+    opacity: 1;
+}
+
+/* Add a slight button lift on hover for better interaction feedback */
+.btn:hover, .primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/*
+  Add a specific style for the Booking button since it is a link with
+  the class 'btn' but also a 'primary-btn'
+*/
+.booking-form .primary-btn {
+    background-color: #2b6777; /* Maintain original background color */
+    color: white;
+}
+
+.booking-form .primary-btn:hover {
+    background-color: #2b6777; /* Prevent background color change on hover */
+}
+.auth-container {
+    max-width: 400px;
+    margin: 8rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.auth-container h2 {
+    font-size: 2rem;
+    color: #3c3c94;
+    margin-bottom: 1.5rem;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.auth-container label {
+    font-weight: 600;
+    color: #444;
+    text-align: left;
+    margin-bottom: -0.5rem;
+}
+
+.auth-container input[type="email"],
+.auth-container input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.auth-container input:focus {
+    border-color: #2b6777;
+    outline: none;
+}
+
+/*
+  Add glowing edge effect to the submit button.
+*/
+.auth-container button[type="submit"] {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.4s ease-in-out;
+    background-color: #2b6777;
+    color: white;
+    padding: 0.9rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    
+    --glow-color: #55c8ff;
+}
+
+/* Create the glowing pseudo-element */
+.auth-container button[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--glow-color), transparent 70%);
+    opacity: 0;
+    z-index: -1;
+    transform: rotate(0deg);
+    transition: all 0.5s ease-in-out;
+    filter: blur(20px); /* Apply a blur to create the glow effect */
+}
+
+/* Animate the glow and lift on hover */
+.auth-container button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.auth-container button[type="submit"]:hover::before {
+    transform: rotate(180deg);
+    opacity: 1;
+}
+
+.auth-container p {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.auth-container p a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .auth-container {
+        margin: 2rem 1rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .auth-container h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(60, 60, 148, 0.6), rgba(60, 60, 148, 0.6)), url('../images/pexels-polina-tankilevitch-5234582.jpg') no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 1rem;
+  margin-top: 40px;
+  margin-left: 150px;
+  margin-bottom: 40px;
+  margin-right: 150px;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: #ffd700;
+  color: #333;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e6c200;
+}
+
+/* Sections */
+section {
+  padding: 4rem 1rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.about, .services, .testimonials, .blog-preview {
+  background-color: white;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #3c3c94;
+}
+
+.card, blockquote {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1rem;
+}
+
+.service-cards, .blog-cards, .testimonial-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 1rem;
+}
+.blog-section {
+  padding: 3rem 1rem;
+  background-color: #ffffff;
+}
+
+.blog-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.blog-card img {
+  max-width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.blog-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2b6777;
+}
+
+.blog-meta {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.blog-content {
+  color: #444;
+  line-height: 1.6;
+}
+
+.add-blog-form {
+  background-color: #f7f9fc;
+  border: 1px solid #ddd;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.add-blog-form h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.add-blog-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"],
+.form-group textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+  border-color: #0066cc;
+  outline: none;
+}
+
+.primary-btn {
+  background-color: #0066cc;
+  color: #fff;
+  padding: 0.9rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: #004a99;
+}
+
+
+/* Footer */
+.site-footer {
+  background-color: #3c3c94;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .service-cards, .blog-cards, .testimonial-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}

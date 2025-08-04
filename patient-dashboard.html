@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Dashboard | Imara Nest</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Imara Nest</h1>
+      <ul class="nav-links">
+        <li><a href="book.html">Book Appointment</a></li>
+        <li><a href="blog.html">Health Blog</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <h2>Welcome, Patient</h2>
+    <section class="records">
+      <h3>Your Appointments</h3>
+      <ul id="appointmentsList">
+        <!-- Populated by JavaScript -->
+      </ul>
+    </section>
+    <section class="profile">
+      <h3>Your Records</h3>
+      <p>Details about the patient’s history and prescriptions will be shown here (mock content).</p>
+    </section>
+  </main>
+
+  <script src="js/patient-dashboard.js"></script>
+</body>
+</html>

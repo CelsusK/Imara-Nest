@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment - Imara Nest</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">Imara Nest</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="booking-section">
+    <div class="container">
+      <h2 class="section-title">Book an Appointment</h2>
+      <p class="section-subtitle">Fill in your details below to schedule a session with our licensed therapists. All consultations are confidential and securely encrypted.</p>
+
+      <form class="booking-form">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="doctor">Choose Therapist</label>
+          <select id="doctor" name="doctor">
+            <option disabled selected>Select a specialist</option>
+            <option>Dr. Achieng - PTSD Specialist</option>
+            <option>Dr. Mwangi - Couples Therapy</option>
+            <option>Dr. Kimathi - Anxiety Disorders</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="form-group">
+            <label for="time">Preferred Time</label>
+            <input type="time" id="time" name="time" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="notes">Additional Notes</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="e.g. Brief description of concerns or expectations"></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn primary-btn">Confirm Booking</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Imara Nest. All rights reserved.</p>
+  </footer>
+</body>
+</html>
